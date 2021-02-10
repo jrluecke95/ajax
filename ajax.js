@@ -1,20 +1,44 @@
 const dogButton = document.getElementById('dog');
 
+// dogButton.addEventListener('click', () => {
+//     dogButton.innerHTML = 'generating dog...'
+//     fetch("https://dog.ceo/api/breeds/image/random")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         const dogImg = document.createElement('img');
+//         dogImg.setAttribute('src', data.message);
+//         dogImg.setAttribute('width', '100px');
+//         const imageContainer = document.querySelector('#image-container')
+//         imageContainer.innerHTML = '';
+//         imageContainer.append(dogImg)
+//         dogButton.innerHTML = 'Generate Dog'
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     });
+// })
+
 dogButton.addEventListener('click', () => {
     dogButton.innerHTML = 'generating dog...'
     fetch("https://dog.ceo/api/breeds/image/random")
     .then((res) => res.json())
     .then((data) => {
+        const picSlide = document.getElementById('picSlide');
+        console.log(picSlide)
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item', 'active');
+
         const dogImg = document.createElement('img');
+        dogImg.classList.add('d-block');
+        dogImg.classList.add('w-100');
         dogImg.setAttribute('src', data.message);
-        dogImg.setAttribute('width', '100px');
-        const imageContainer = document.querySelector('#image-container')
-        imageContainer.innerHTML = '';
-        imageContainer.append(dogImg)
-        dogButton.innerHTML = 'Generate Dog'
+        carouselItem.append(dogImg);
+        dogButton.innerHTML = 'Generate Dog';
+        picSlide.append(carouselItem);
+        console.log(carouselItem)
     })
     .catch((error) => {
-        console.log('error')
+        console.log(error)
     });
 })
 
