@@ -21,23 +21,38 @@
         <div class="row mt-5 ml-5 mb-5">
             <button id="dog">Generate Dog</button>
         </div>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" id="picSlide">
-            </div>
-        </div>
-        <div class='row mt-5 ml-5 mr-5'>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Dog Breeds</label>
+        <div class="container-sm col-6">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" id="picSlide">
                 </div>
-                <select class="custom-select" id="dogBreedsMenu2">
-                    <option selected>Choose...</option>
-                </select>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
 
+    </div>
 
-        <script src="ajax.js"></script>
+
+    <div class='row mt-5 ml-5 mr-5'>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Dog Breeds</label>
+            </div>
+            <select class="custom-select" id="dogBreedsMenu">
+                <option selected>Choose...</option>
+            </select>
+        </div>
+    </div>
+
+
+
+    <script src="ajax.js"></script>
     </div>
 
 </body>
