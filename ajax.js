@@ -77,6 +77,7 @@ dogBreedsMenu.addEventListener('change', () => {
             carouselItem.classList.add('active')
             carouselItem.classList.add('carousel-item')
             carouselItem.classList.add('img-thumbnail')
+            car
         } else {
             carouselItem.classList.add('carousel-item')
             carouselItem.classList.add('img-thumbnail')
@@ -84,7 +85,8 @@ dogBreedsMenu.addEventListener('change', () => {
         
         const dogImg = document.createElement('img');
         dogImg.classList.add('d-block');
-        dogImg.classList.add('w-100');
+        dogImg.classList.add('mw-100');
+        dogImg.classList.add('mh-100');
         dogImg.setAttribute('src', data.message);
         carouselItem.append(dogImg);
         dogButton.innerHTML = 'Generate Dog';
